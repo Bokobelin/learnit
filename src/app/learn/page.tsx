@@ -1,24 +1,36 @@
-import { Button } from '@/components/ui/button';
-import { getLessonPages } from './utils/getLessons';
 import Link from 'next/link';
-
+import { getLessonPages } from './utils/getLessonPages';
+import { Button } from '@/components/ui/button';
 
 export default function LearnPage() {
     const lessonPages = getLessonPages();
 
     return (
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-black text-white">
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-                <h1 className="text-4xl font-bold text-center sm:text-left">
-                    Start learning Python
+        <div className="flex items-center justify-center min-h-screen p-8 pb-20 sm:p-20 bg-black text-white">
+            <main className="flex flex-col items-center text-center gap-8">
+                <h1 className="text-4xl font-bold">
+                    Python Lessons
                 </h1>
-                <section className="flex flex-col gap-4 items-center">
-                    {lessonPages.map(lesson => (
-                        <Link key={lesson.id} href={lesson.path}>
-                            <Button className="text-blue-500 hover:underline w-full">{lesson.id}</Button>
-                        </Link>
-                    ))}
-                </section>
+                <table className="table-auto w-full text-left">
+                    <thead>
+                        <tr>
+                            <th className="px-4 py-2">Lesson</th>
+                            <th className="px-4 py-2">Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {lessonPages.map((lesson, index) => (
+                            <tr key={lesson.id} className="border-t border-gray-700">
+                                <td className="px-4 py-2">{index + 1}. {lesson.id}</td>
+                                <td className="px-4 py-2">
+                                    <Link href={lesson.path}>
+                                        <Button className="text-blue-500 hover:underline">Go to lesson</Button>
+                                    </Link>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </main>
         </div>
     );
