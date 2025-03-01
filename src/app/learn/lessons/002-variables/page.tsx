@@ -21,7 +21,7 @@ export default function IntroPage() {
                     This bit of code creates a variable named <code>x</code> and assigns it the value <code>5</code>.
                     <br />
                     You can then use the variable <code>x</code> in your program.
-                    Here's an example:
+                    Here&apos;s an example:
                 </h4>
                 <CodeBlock code={`x = 5\nprint(x)`} />
                 <h4>
