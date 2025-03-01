@@ -15,7 +15,7 @@ export default function IntroPage() {
                     Python is a general-purpose programming language. Python is designed to be easy to read and write, and is known for its simplicity and elegance.
                 </h3>
                 <h4>
-                    Let's start with a simple example. Create a file called <code>hello.py</code> and write the following code:
+                    Let&apos;s start with a simple example. Create a file called <code>hello.py</code> and write the following code:
                 </h4>
                 <CodeBlock code={`print('Hello, World!')`} />
                 <h4>
@@ -26,9 +26,9 @@ export default function IntroPage() {
                     You should see the output <code>Hello, World!</code> printed to the terminal.
                 </h4>
                 <h4>
-                    Now, let's understand the code:
+                    Now, let&apos;s understand the code:
                     <br />
-                    <code>print</code> followed by parentheses <code>()</code> is a displays the text between the parentheses to the console. But you can't just put text like that; we need to wrap it in quotes <code>''</code> or <code>""</code>.
+                    <code>print</code> followed by parentheses <code>()</code> is a displays the text between the parentheses to the console. But you can&apos;t just put text like that; we need to wrap it in quotes <code>&apos;&apos;</code> or <code>&quot;&quot;</code>.
                 </h4>
             </main>
         </div>

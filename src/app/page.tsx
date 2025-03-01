@@ -21,7 +21,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          The dev's Github →
+          The dev&apos;s Github →
         </a>
       </footer>
     </div>
