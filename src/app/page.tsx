@@ -55,7 +55,7 @@ function Header() {
 
         <div className="hidden md:flex items-center gap-4">
           <Button asChild>
-            <Link href="/signup">Get Started</Link>
+            <Link href="#courses">Get Started</Link>
           </Button>
         </div>
 
@@ -103,7 +103,7 @@ function Header() {
             </Link>
             <div className="flex flex-col gap-2 pt-2 border-t">
               <Button asChild>
-                <Link href="/signup" onClick={() => setIsMenuOpen(false)}>
+                <Link href="#courses" onClick={() => setIsMenuOpen(false)}>
                   Get Started
                 </Link>
               </Button>
@@ -135,7 +135,7 @@ function HeroSection() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Button size="lg" asChild>
-                <Link href="/signup">Start Learning Now</Link>
+                <Link href="#courses">Start Learning Now</Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <Link href="#courses">Explore Courses</Link>
@@ -317,15 +317,6 @@ function CoursesSection() {
           </TabsContent>
           */}
         </Tabs>
-
-        <div className="mt-12 text-center">
-          <Button size="lg" variant="outline" asChild>
-            <Link href="/courses">
-              View All Courses
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-        </div>
       </div>
     </section>
   )
@@ -489,7 +480,7 @@ function PricingSection() {
               </CardContent>
               <CardFooter>
                 <Button className="w-full" variant={plan.popular ? "default" : "outline"} asChild>
-                  <Link href={plan.title === "Teams" ? "/contact" : "/signup"}>{plan.cta}</Link>
+                  <Link href={plan.title === "Teams" ? "/contact" : "#courses"}>{plan.cta}</Link>
                 </Button>
               </CardFooter>
             </Card>

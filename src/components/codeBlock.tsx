@@ -16,7 +16,7 @@ const CodeBlock: React.FC<CodeBlockProps> = ({ code }) => {
 
     return (
         <div className="relative group">
-            <pre className="bg-gray-800 text-white p-4 rounded-md transition-transform transform group-hover:scale-105">
+            <pre className="bg-gray-800 text-white p-4 rounded-md text-left transition-transform transform group-hover:scale-105">
                 <code>{code}</code>
             </pre>
             <button
