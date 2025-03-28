@@ -1,13 +1,11 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CheckCircle, Code, BookOpen, Users, Zap, Star, ArrowRight, Menu, X } from "lucide-react"
+import { CheckCircle, Code, Users, ArrowRight, Menu, X } from "lucide-react"
 import { useState } from "react"
 
 export default function LandingPage() {
@@ -445,7 +443,7 @@ function PricingSection() {
             </Badge>
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Simple, transparent pricing</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Choose the plan that's right for your learning journey. All plans include access to our community.
+              Choose the plan that&apos;s right for your learning journey. All plans include access to our community.
             </p>
           </div>
         </div>
@@ -505,125 +503,3 @@ function PricingSection() {
     </section>
   )
 }
-
-function CtaSection() {
-  return (
-    <section className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Start your coding journey today</h2>
-            <p className="max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Join thousands of students already learning on our platform. Get started with your first lesson now.
-            </p>
-          </div>
-          <div className="mx-auto w-full max-w-sm space-y-2">
-            <form className="flex flex-col sm:flex-row gap-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="max-w-lg flex-1 bg-primary-foreground text-foreground"
-              />
-              <Button type="submit" variant="secondary">
-                Get Started
-              </Button>
-            </form>
-            <p className="text-xs opacity-80">
-              By signing up, you agree to our{" "}
-              <Link href="/terms" className="underline underline-offset-2">
-                Terms & Conditions
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-function Footer() {
-  return (
-    <footer className="w-full border-t bg-background py-6 md:py-12">
-      <div className="container px-4 md:px-6">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2">
-              <Code className="h-6 w-6 text-primary" />
-              <span className="text-xl font-bold">LearnIT</span>
-            </Link>
-            <p className="text-sm text-muted-foreground">
-              Empowering the next generation of developers with quality coding education.
-            </p>
-            <div className="flex gap-4">
-              {["Twitter", "GitHub", "LinkedIn", "YouTube"].map((social) => (
-                <Link key={social} href="#" className="text-muted-foreground hover:text-foreground">
-                  <span className="sr-only">{social}</span>
-                  <div className="h-6 w-6 rounded-full bg-muted flex items-center justify-center">
-                    <span className="text-xs">{social[0]}</span>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <div className="text-sm font-medium">Platform</div>
-            <ul className="space-y-2 text-sm">
-              {["Courses", "Learning Paths", "Projects", "Certifications", "Pricing"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <div className="text-sm font-medium">Resources</div>
-            <ul className="space-y-2 text-sm">
-              {["Blog", "Documentation", "Cheat Sheets", "Career Guide", "Community"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <div className="text-sm font-medium">Company</div>
-            <ul className="space-y-2 text-sm">
-              {["About Us", "Careers", "Partners", "Contact", "Legal"].map((item) => (
-                <li key={item}>
-                  <Link href="#" className="text-muted-foreground hover:text-foreground">
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-8 border-t pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} LearnIT. All rights reserved.
-          </p>
-          <div className="flex gap-4">
-            <Link href="/privacy" className="text-xs text-muted-foreground hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-xs text-muted-foreground hover:text-foreground">
-              Terms of Service
-            </Link>
-            <Link href="/cookies" className="text-xs text-muted-foreground hover:text-foreground">
-              Cookie Policy
-            </Link>
-          </div>
-        </div>
-      </div>
-    </footer>
-  )
-}
-

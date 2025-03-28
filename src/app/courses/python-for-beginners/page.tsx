@@ -19,7 +19,7 @@ export default function LearnPage() {
                         </tr>
                     </thead>
                     <tbody>
-                        {lessonPages.map((lesson, index) => (
+                        {lessonPages.map((lesson) => (
                             <tr key={lesson.id} className="border-t border-gray-700">
                                 <td className="px-4 py-2">{lesson.id}</td>
                                 <td className="px-4 py-2">
