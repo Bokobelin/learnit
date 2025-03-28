@@ -3,7 +3,7 @@ import { getLessonPages } from './utils/getLessonPages';
 import { Button } from '@/components/ui/button';
 
 export default function LearnPage() {
-    const lessonPages = getLessonPages();
+    const lessonPages = getLessonPages("python");
 
     return (
         <div className="flex items-center justify-center min-h-screen p-8 pb-20 sm:p-20 bg-black text-white">
