@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CheckCircle, Code, Users, ArrowRight, Menu, X } from "lucide-react"
+import { CheckCircle, Code, Users, Menu, X } from "lucide-react"
 import { useState } from "react"
 
 export default function LandingPage() {
