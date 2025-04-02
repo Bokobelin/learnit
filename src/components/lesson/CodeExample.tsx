@@ -1,7 +1,7 @@
 "use client"
 
 import React from "react"
-import { Copy, Check, Play } from "lucide-react"
+import { Copy, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -21,7 +21,6 @@ export default function CodeExample({
   title,
   showLineNumbers = true,
   className,
-  onExecute,
 }: CodeExampleProps) {
   const [copied, setCopied] = React.useState(false)
 

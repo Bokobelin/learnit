@@ -18,7 +18,7 @@ export default function IntroPage() {
     >
       <ContentSection>
         <p>
-          Python is a general-purpose programming language known for its simplicity and elegance. It's designed to be
+          Python is a general-purpose programming language known for its simplicity and elegance. It&apos;s designed to be
           easy to read and write, making it an excellent choice for beginners.
         </p>
 
@@ -37,7 +37,7 @@ export default function IntroPage() {
 
       <ContentSection title="Your First Python Program">
         <p>
-          Let's start with a simple example. Create a file called <code>hello.py</code> and write the following code:
+          Let&apos;s start with a simple example. Create a file called <code>hello.py</code> and write the following code:
         </p>
 
         <CodeExample code={`print('Hello, World!')`} title="hello.py" />
@@ -55,7 +55,7 @@ export default function IntroPage() {
       </ContentSection>
 
       <ContentSection title="Understanding the Code">
-        <p>Let's break down what's happening in our first program:</p>
+        <p>Let&apos;s break down what&apos;s happening in our first program:</p>
 
         <ul className="list-disc pl-6 space-y-2">
           <li>
@@ -63,8 +63,8 @@ export default function IntroPage() {
           </li>
           <li>The text we want to display is placed inside the parentheses as an argument.</li>
           <li>
-            Text in Python must be enclosed in quotes - either single quotes (<code>'text'</code>) or double quotes (
-            <code>"text"</code>).
+            Text in Python must be enclosed in quotes - either single quotes (<code>&apos;text&apos;</code>) or double quotes (
+            <code>&quot;text&quot;</code>).
           </li>
         </ul>
 
@@ -78,8 +78,7 @@ export default function IntroPage() {
         <p>Now that you understand the basics, try modifying the program to print your own message:</p>
 
         <CodeExample
-          code={`# This is a comment - it doesn't affect the code
-print('Hello, Python learner!')
+          code={`print('Hello, Python learner!')
 print("I'm excited to learn Python programming.")`}
           title="hello.py"
         />
