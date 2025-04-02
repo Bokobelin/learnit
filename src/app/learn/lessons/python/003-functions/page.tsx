@@ -1,9 +1,20 @@
-import CodeBlock from "@/components/codeBlock";
+import LessonLayout from "@/components/lesson/LessonLayout"
+import ContentSection from "@/components/lesson/ContentSection"
+import CodeExample from "@/components/lesson/CodeExample"
 
 export default function IntroPage() {
     return (
-        <div className="flex items-center justify-center min-h-screen p-8 pb-20 sm:p-20 bg-black text-white">
-            <main className="flex flex-col items-center text-center gap-8">
+        <LessonLayout
+                      title="Introduction to Python"
+                      course="Python"
+                      lessonNumber={3}
+                      totalLessons={3}
+                      nextLesson={{
+                        title: "Functions",
+                        path: "/learn/lessons/python/003-functions",
+                      }}
+                    >
+                        <ContentSection>
                 <h1 className="text-4xl font-bold">
                     Functions
                 </h1>
@@ -16,7 +27,7 @@ export default function IntroPage() {
                 <h4>
                     Here&apos;s an example:
                 </h4>
-                <CodeBlock code={`def greet():\n    print("Hello, World")`} />
+                <CodeExample code={`def greet():\n    print("Hello, World")`} title="functions.py" />
                 <h4>
                     The code must be indented with a tab to show that it is part of the function body.
                     <br />
@@ -27,8 +38,8 @@ export default function IntroPage() {
                 <h4>
                     Here&apos;s an example:
                 </h4>
-                <CodeBlock code={`greet()`} />
-            </main>
-        </div>
+                <CodeExample code={`greet()`} title="functions.py" />
+            </ContentSection>
+        </LessonLayout>
     );
 }

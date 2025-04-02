@@ -1,36 +1,95 @@
-import CodeBlock from "@/components/codeBlock";
-import Link from "next/link";
+import LessonLayout from "@/components/lesson/LessonLayout"
+import ContentSection from "@/components/lesson/ContentSection"
+import CodeExample from "@/components/lesson/CodeExample"
+import Note from "@/components/lesson/Note"
+import Link from "next/link"
 
 export default function IntroPage() {
-    return (
-        <div className="flex items-center justify-center min-h-screen p-8 pb-20 sm:p-20 bg-black text-white">
-            <main className="flex flex-col items-center text-center gap-8">
-                <h1 className="text-4xl font-bold">
-                    Intro to Python
-                </h1>
-                <h2>
-                    If you do not have Python installed on your computer, you can find it <Link className="underline text-blue-500" href="https://www.python.org/downloads/">here</Link>.
-                </h2>
-                <h3>
-                    Python is a general-purpose programming language. Python is designed to be easy to read and write, and is known for its simplicity and elegance.
-                </h3>
-                <h4>
-                    Let&apos;s start with a simple example. Create a file called <code>hello.py</code> and write the following code:
-                </h4>
-                <CodeBlock code={`print('Hello, World!')`} />
-                <h4>
-                    To run the code, open a terminal and navigate to the directory where the file is located. Then run the following command:
-                </h4>
-                <CodeBlock code={`python hello.py`} />
-                <h4>
-                    You should see the output <code>Hello, World!</code> printed to the terminal.
-                </h4>
-                <h4>
-                    Now, let&apos;s understand the code:
-                    <br />
-                    <code>print</code> followed by parentheses <code>()</code> is a displays the text between the parentheses to the console. But you can&apos;t just put text like that; we need to wrap it in quotes <code>&apos;&apos;</code> or <code>&quot;&quot;</code>.
-                </h4>
-            </main>
-        </div>
-    );
+  return (
+    <LessonLayout
+      title="Introduction to Python"
+      course="Python"
+      lessonNumber={1}
+      totalLessons={3}
+      nextLesson={{
+        title: "Variables",
+        path: "/learn/lessons/python/002-variables",
+      }}
+    >
+      <ContentSection>
+        <p>
+          Python is a general-purpose programming language known for its simplicity and elegance. It's designed to be
+          easy to read and write, making it an excellent choice for beginners.
+        </p>
+
+        <Note type="info">
+          If you do not have Python installed on your computer, you can download and install it from{" "}
+          <Link
+            className="underline text-blue-400 hover:text-blue-300"
+            href="https://www.python.org/downloads/"
+            target="_blank"
+          >
+            python.org
+          </Link>
+          .
+        </Note>
+      </ContentSection>
+
+      <ContentSection title="Your First Python Program">
+        <p>
+          Let's start with a simple example. Create a file called <code>hello.py</code> and write the following code:
+        </p>
+
+        <CodeExample code={`print('Hello, World!')`} title="hello.py" />
+
+        <p>
+          To run the code, open a terminal and navigate to the directory where the file is located. Then run the
+          following command:
+        </p>
+
+        <CodeExample code={`python hello.py`} language="bash" title="Terminal" />
+
+        <p>
+          You should see the output <code>Hello, World!</code> printed to the terminal.
+        </p>
+      </ContentSection>
+
+      <ContentSection title="Understanding the Code">
+        <p>Let's break down what's happening in our first program:</p>
+
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <code>print()</code> is a built-in Python function that displays text to the console.
+          </li>
+          <li>The text we want to display is placed inside the parentheses as an argument.</li>
+          <li>
+            Text in Python must be enclosed in quotes - either single quotes (<code>'text'</code>) or double quotes (
+            <code>"text"</code>).
+          </li>
+        </ul>
+
+        <Note type="tip">
+          Python is case-sensitive, so <code>print()</code> works, but <code>Print()</code> or <code>PRINT()</code>{" "}
+          would cause an error.
+        </Note>
+      </ContentSection>
+
+      <ContentSection title="Try It Yourself">
+        <p>Now that you understand the basics, try modifying the program to print your own message:</p>
+
+        <CodeExample
+          code={`# This is a comment - it doesn't affect the code
+print('Hello, Python learner!')
+print("I'm excited to learn Python programming.")`}
+          title="hello.py"
+        />
+
+        <p>
+          Notice that we can use both single and double quotes for strings. Double quotes are useful when your text
+          contains apostrophes.
+        </p>
+      </ContentSection>
+    </LessonLayout>
+  )
 }
+
